@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                                                                    
+    <meta charset="UTF-8">
+    <meta name="viewport" cont bn                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ent="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <h3>调色板</h3>
+        <input type="range" min="0" max="255" v-model="r"/>{{r}}
+        <input type="range" min="0" max="255" v-model="g"/>{{g}}
+        <input type="range" min="0" max="255" v-model="b"/>{{b}}
+        <input type="number" v-model="w"/>
+        <input type="number" v-model="h"/>
+        <div v-bind:style="{'width':w+'px','height':h+'px',background:'rgb('+r+','+g+','+b+')'}"></div>
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                r:0,
+                g:0,
+                b:0,
+                w:100,
+                h:100
+            }
+        })
+    </script>
+</body>
+</html>
